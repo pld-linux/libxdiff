@@ -20,13 +20,13 @@ to create file differences/patches to both binary and text files. It
 uses memory files as file abstraction to achieve both performance and
 portability. For binary files, it implements (with some modification)
 the algorithm described in "File System Support for Delta Compression"
-by Joshua P. MacDonald. For text files, it follows directives described
-in "An O(ND) Difference Algorithm and Its Variations" by Eugene W.
-Myers. Memory files used by the library are basically a collection of
-buffers that store the file content.
+by Joshua P. MacDonald. For text files, it follows directives
+described in "An O(ND) Difference Algorithm and Its Variations" by
+Eugene W. Myers. Memory files used by the library are basically a
+collection of buffers that store the file content.
 
 %description -l pl
-Biblioteka LibXDiff ma zaimplementowan± podstawow± i prawie kompletn±
+Biblioteka LibXDiff ma zaimplementowan± podstawow±, ale kompletn±,
 funkcjonalno¶æ do tworzenia plików ró¿nicowych/³atek zarówno dla
 plików binarnych jak i tekstowych. Wykorzystuje pliki pamiêciowe w
 celu uzyskania zarówno wydajno¶ci, jak i przeno¶no¶ci. Dla plików
