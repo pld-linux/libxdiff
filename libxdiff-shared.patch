@@ -1,0 +1,25 @@
+--- libxdiff-0.5/test/Makefile.am.orig	Fri Oct  3 21:09:08 2003
++++ libxdiff-0.5/test/Makefile.am	Fri Jan  9 10:28:27 2004
+@@ -3,8 +3,8 @@
+ 
+ noinst_PROGRAMS = xdiff_test xregression
+ xdiff_test_SOURCES = xdiff_test.c xtestutils.c
+-xdiff_test_LDADD = ../xdiff/libxdiff.a
++xdiff_test_LDADD = ../xdiff/libxdiff.la
+ 
+ xregression_SOURCES = xregression.c xtestutils.c
+-xregression_LDADD = ../xdiff/libxdiff.a
++xregression_LDADD = ../xdiff/libxdiff.la
+ 
+--- libxdiff-0.5/xdiff/Makefile.am.orig	Fri Oct  3 21:09:08 2003
++++ libxdiff-0.5/xdiff/Makefile.am	Fri Jan  9 10:28:09 2004
+@@ -1,7 +1,7 @@
+ 
+ include_HEADERS = xdiff.h
+ 
+-lib_LIBRARIES = libxdiff.a
+-libxdiff_a_SOURCES = xdiffi.c xprepare.c xpatchi.c xmerge3.c xemit.c xmissing.c xutils.c xadler32.c xbdiff.c xbpatchi.c xversion.c
++lib_LTLIBRARIES = libxdiff.la
++libxdiff_la_SOURCES = xdiffi.c xprepare.c xpatchi.c xmerge3.c xemit.c xmissing.c xutils.c xadler32.c xbdiff.c xbpatchi.c xversion.c
+ 
+ 
