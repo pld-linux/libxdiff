@@ -1,12 +1,12 @@
 Summary:	Create diffs/patches for text/binary files
 Summary(pl):	Tworzenie diffów/³at dla plików tekstowych i binarnych
 Name:		libxdiff
-Version:	0.5
+Version:	0.6
 Release:	0.1
 License:	LGPL
 Group:		Libraries
 Source0:	http://www.xmailserver.org/%{name}-%{version}.tar.gz
-# Source0-md5:	d848a5569d499b1228d3d3c98489ae58
+# Source0-md5:	dacca909dd6890b855b79fc1d5d294c8
 Patch0:		%{name}-shared.patch
 URL:		http://www.xmailserver.org/xdiff-lib.html
 BuildRequires:	autoconf
