@@ -7,6 +7,7 @@ License:	LGPL
 Group:		Libraries
 Source0:	http://www.xmailserver.org/%{name}-%{version}.tar.gz
 # Source0-md5:	d848a5569d499b1228d3d3c98489ae58
+Patch0:		%{name}-shared.patch
 URL:		http://www.xmailserver.org/xdiff-lib.html
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -62,6 +63,7 @@ Statyczna biblioteka libxdiff.
 
 %prep
 %setup -q
+%patch -p1
 
 %build
 %{__libtoolize}
@@ -72,16 +74,11 @@ Statyczna biblioteka libxdiff.
 %configure
 %{__make}
 
-cd xdiff
-%{__cc} -o %{name}.so -shared *.o
-
 %install
 rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
-
-install xdiff/libxdiff.so $RPM_BUILD_ROOT%{_libdir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -91,12 +88,15 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/lib*.so
-%{_mandir}/man3/xdiff.3*
+%doc AUTHORS
+%attr(755,root,root) %{_libdir}/lib*.so.*.*.*
 
 %files devel
 %defattr(644,root,root,755)
+%attr(755,root,root) %{_libdir}/lib*.so
+%{_libdir}/lib*.la
 %{_includedir}/xdiff.h
+%{_mandir}/man3/xdiff.3*
 
 %files static
 %defattr(644,root,root,755)
