@@ -1,5 +1,5 @@
 Summary:	Create diffs/patches for text/binary files
-Summary(pl):	Tworzenie diffów/patchy dla plików tekstowych/binarnych
+Summary(pl):	Tworzenie diffów/³at dla plików tekstowych i binarnych
 Name:		libxdiff
 Version:	0.5
 Release:	0.1
@@ -8,6 +8,9 @@ Group:		Libraries
 Source0:	http://www.xmailserver.org/%{name}-%{version}.tar.gz
 # Source0-md5:	d848a5569d499b1228d3d3c98489ae58
 URL:		http://www.xmailserver.org/xdiff-lib.html
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -21,18 +24,17 @@ in "An O(ND) Difference Algorithm and Its Variations" by Eugene W.
 Myers. Memory files used by the library are basically a collection of
 buffers that store the file content.
 
-
 %description -l pl
-Biblioteka LibXDiff ma zaimplementowan± podastwow± i prawie kompletn±
-funkcjonalno¶æ do tworzenia plików ró¿nicowych/³atek zarówno dla plików
-binarnych jak i tekstowych. Wykorzystuje pliki pamiêciowe w celu
-uzyskania zarówno wydajno¶ci, jak i przeno¶no¶ci. Dla plików binarnych
-wykorzystuje (z drobnymi modyfikacjami) algorytm opisany w ksi±¿ce
-"Wsparcie Systemu Plików dla Kompresji Delta" autorstwa Joshua P.
-Macdonald'a. Dla plików tekstowych postêpuje zgodnie z zaleceniami
-opisanymi w "Algorytm ró¿nicowy O(ND) i jego wariacje" autorstwa Eugene
-W. Myers. Pliki pamiêcioweo u¿yte w bibliotece s± w zaszie kolekcj±
-buforów przechowuj±cych zawarto¶æ pliku.
+Biblioteka LibXDiff ma zaimplementowan± podstawow± i prawie kompletn±
+funkcjonalno¶æ do tworzenia plików ró¿nicowych/³atek zarówno dla
+plików binarnych jak i tekstowych. Wykorzystuje pliki pamiêciowe w
+celu uzyskania zarówno wydajno¶ci, jak i przeno¶no¶ci. Dla plików
+binarnych wykorzystuje (z drobnymi modyfikacjami) algorytm opisany w
+ksi±¿ce "Wsparcie Systemu Plików dla Kompresji Delta" autorstwa Joshuy
+P. Macdonalda. Dla plików tekstowych postêpuje zgodnie z zaleceniami
+opisanymi w "Algorytm ró¿nicowy O(ND) i jego wariacje" autorstwa
+Eugene W. Myers. Pliki pamiêciowe u¿yte w bibliotece s± w zasadzie
+kolekcj± buforów przechowuj±cych zawarto¶æ pliku.
 
 %package devel
 Summary:	Header files for libxdiff library
