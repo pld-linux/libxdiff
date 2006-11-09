@@ -41,7 +41,7 @@ kolekcj± buforów przechowuj±cych zawarto¶æ pliku.
 Summary:	Header files for libxdiff library
 Summary(pl):	Pliki nag³ówkowe biblioteki libxdiff
 Group:		Development/Libraries
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{version}-%{release}
 
 %description devel
 Header files for libxdiff library.
@@ -53,7 +53,7 @@ Pliki nag³ówkowe biblioteki libxdiff.
 Summary:	Static libxdiff library
 Summary(pl):	Statyczna biblioteka libxdiff
 Group:		Development/Libraries
-Requires:	%{name}-devel = %{version}
+Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static libxdiff library.
