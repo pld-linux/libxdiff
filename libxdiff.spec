@@ -1,5 +1,5 @@
 Summary:	Create diffs/patches for text/binary files
-Summary(pl):	Tworzenie diffów/³at dla plików tekstowych i binarnych
+Summary(pl.UTF-8):   Tworzenie diffÃ³w/Å‚at dla plikÃ³w tekstowych i binarnych
 Name:		libxdiff
 Version:	0.7
 Release:	1
@@ -25,40 +25,40 @@ described in "An O(ND) Difference Algorithm and Its Variations" by
 Eugene W. Myers. Memory files used by the library are basically a
 collection of buffers that store the file content.
 
-%description -l pl
-Biblioteka LibXDiff ma zaimplementowan± podstawow±, ale kompletn±,
-funkcjonalno¶æ do tworzenia plików ró¿nicowych/³atek zarówno dla
-plików binarnych jak i tekstowych. Wykorzystuje pliki pamiêciowe w
-celu uzyskania zarówno wydajno¶ci, jak i przeno¶no¶ci. Dla plików
+%description -l pl.UTF-8
+Biblioteka LibXDiff ma zaimplementowanÄ… podstawowÄ…, ale kompletnÄ…,
+funkcjonalnoÅ›Ä‡ do tworzenia plikÃ³w rÃ³Å¼nicowych/Å‚atek zarÃ³wno dla
+plikÃ³w binarnych jak i tekstowych. Wykorzystuje pliki pamiÄ™ciowe w
+celu uzyskania zarÃ³wno wydajnoÅ›ci, jak i przenoÅ›noÅ›ci. Dla plikÃ³w
 binarnych wykorzystuje (z drobnymi modyfikacjami) algorytm opisany w
-ksi±¿ce "Wsparcie Systemu Plików dla Kompresji Delta" autorstwa Joshuy
-P. Macdonalda. Dla plików tekstowych postêpuje zgodnie z zaleceniami
-opisanymi w "Algorytm ró¿nicowy O(ND) i jego wariacje" autorstwa
-Eugene W. Myers. Pliki pamiêciowe u¿yte w bibliotece s± w zasadzie
-kolekcj± buforów przechowuj±cych zawarto¶æ pliku.
+ksiÄ…Å¼ce "Wsparcie Systemu PlikÃ³w dla Kompresji Delta" autorstwa Joshuy
+P. Macdonalda. Dla plikÃ³w tekstowych postÄ™puje zgodnie z zaleceniami
+opisanymi w "Algorytm rÃ³Å¼nicowy O(ND) i jego wariacje" autorstwa
+Eugene W. Myers. Pliki pamiÄ™ciowe uÅ¼yte w bibliotece sÄ… w zasadzie
+kolekcjÄ… buforÃ³w przechowujÄ…cych zawartoÅ›Ä‡ pliku.
 
 %package devel
 Summary:	Header files for libxdiff library
-Summary(pl):	Pliki nag³ówkowe biblioteki libxdiff
+Summary(pl.UTF-8):   Pliki nagÅ‚Ã³wkowe biblioteki libxdiff
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
 %description devel
 Header files for libxdiff library.
 
-%description devel -l pl
-Pliki nag³ówkowe biblioteki libxdiff.
+%description devel -l pl.UTF-8
+Pliki nagÅ‚Ã³wkowe biblioteki libxdiff.
 
 %package static
 Summary:	Static libxdiff library
-Summary(pl):	Statyczna biblioteka libxdiff
+Summary(pl.UTF-8):   Statyczna biblioteka libxdiff
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static libxdiff library.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Statyczna biblioteka libxdiff.
 
 %prep
