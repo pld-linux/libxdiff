@@ -1,5 +1,5 @@
 Summary:	Create diffs/patches for text/binary files
-Summary(pl.UTF-8):   Tworzenie diffów/łat dla plików tekstowych i binarnych
+Summary(pl.UTF-8):	Tworzenie diffów/łat dla plików tekstowych i binarnych
 Name:		libxdiff
 Version:	0.7
 Release:	1
@@ -39,7 +39,7 @@ kolekcją buforów przechowujących zawartość pliku.
 
 %package devel
 Summary:	Header files for libxdiff library
-Summary(pl.UTF-8):   Pliki nagłówkowe biblioteki libxdiff
+Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki libxdiff
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
@@ -51,7 +51,7 @@ Pliki nagłówkowe biblioteki libxdiff.
 
 %package static
 Summary:	Static libxdiff library
-Summary(pl.UTF-8):   Statyczna biblioteka libxdiff
+Summary(pl.UTF-8):	Statyczna biblioteka libxdiff
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
