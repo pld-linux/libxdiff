@@ -5,23 +5,10 @@ diff -burN libxdiff-0.7.orig/test/Makefile.am libxdiff-0.7/test/Makefile.am
  
  noinst_PROGRAMS = xdiff_test xregression
  xdiff_test_SOURCES = xdiff_test.c xtestutils.c
--xdiff_test_LDADD = ../xdiff/libxdiff.a
-+xdiff_test_LDADD = ../xdiff/libxdiff.la
+-xdiff_test_LDADD = ../xdiff/.libs/libxdiff.a
++xdiff_test_LDADD = ../xdiff/.libs/libxdiff.la
  
  xregression_SOURCES = xregression.c xtestutils.c
--xregression_LDADD = ../xdiff/libxdiff.a
-+xregression_LDADD = ../xdiff/libxdiff.la
- 
-diff -burN libxdiff-0.7.orig/xdiff/Makefile.am libxdiff-0.7/xdiff/Makefile.am
---- libxdiff-0.7.orig/xdiff/Makefile.am	2004-02-14 15:44:49.742591088 +0100
-+++ libxdiff-0.7/xdiff/Makefile.am	2004-02-14 15:45:49.319534016 +0100
-@@ -1,7 +1,7 @@
- 
- include_HEADERS = xdiff.h
- 
--lib_LIBRARIES = libxdiff.a
--libxdiff_a_SOURCES = xdiffi.c xprepare.c xpatchi.c xmerge3.c xemit.c xmissing.c xutils.c xadler32.c xbdiff.c xbpatchi.c xversion.c xalloc.c
-+lib_LTLIBRARIES = libxdiff.la
-+libxdiff_la_SOURCES = xdiffi.c xprepare.c xpatchi.c xmerge3.c xemit.c xmissing.c xutils.c xadler32.c xbdiff.c xbpatchi.c xversion.c xalloc.c
- 
+-xregression_LDADD = ../xdiff/.libs/libxdiff.a
++xregression_LDADD = ../xdiff/.libs/libxdiff.la
  
