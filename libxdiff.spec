@@ -3,8 +3,9 @@ Summary(pl.UTF-8):	Tworzenie diffów/łat dla plików tekstowych i binarnych
 Name:		libxdiff
 Version:	0.23
 Release:	1
-License:	LGPL
+License:	LGPL v2.1+
 Group:		Libraries
+#Source0Download: http://www.xmailserver.org/xdiff-lib.html
 Source0:	http://www.xmailserver.org/%{name}-%{version}.tar.gz
 # Source0-md5:	8970281543130411d8a1b1f004a8418b
 Patch0:		%{name}-shared.patch
@@ -88,17 +89,17 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc AUTHORS
-%attr(755,root,root) %{_libdir}/lib*.so.*.*.*
-%attr(755,root,root) %ghost %{_libdir}/lib*.so.0
+%doc AUTHORS ChangeLog
+%attr(755,root,root) %{_libdir}/libxdiff.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libxdiff.so.0
 
 %files devel
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/lib*.so
-%{_libdir}/lib*.la
+%attr(755,root,root) %{_libdir}/libxdiff.so
+%{_libdir}/libxdiff.la
 %{_includedir}/xdiff.h
 %{_mandir}/man3/xdiff.3*
 
 %files static
 %defattr(644,root,root,755)
-%{_libdir}/lib*.a
+%{_libdir}/libxdiff.a
