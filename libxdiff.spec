@@ -2,7 +2,7 @@ Summary:	Create diffs/patches for text/binary files
 Summary(pl.UTF-8):	Tworzenie diffów/łat dla plików tekstowych i binarnych
 Name:		libxdiff
 Version:	0.23
-Release:	1
+Release:	2
 License:	LGPL v2.1+
 Group:		Libraries
 #Source0Download: http://www.xmailserver.org/xdiff-lib.html
